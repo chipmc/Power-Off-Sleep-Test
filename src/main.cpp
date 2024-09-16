@@ -31,13 +31,13 @@ void setup() {
   { // First Test - Regular Sleep
     Log.infoln("First Test - sleep for 10 seconds");
     LowPower.sleep(10000);                          // Sleep for 10 seconds
-    Log.infoln("Awoke from first test - pause for 10 seconds");
+    Log.infoln("Awoke from first test - pause for 5 seconds");
   }
 
-  delay (10000);                                     // This simply keeps the serial connection active
+  delay (5000);                                     // This simply keeps the serial connection active
 
   { // Second Test - Wake on interrupt
-    Log.infoln("Second Test - sleep for 10 seconds - wake on clock (WAKE pin = %s)", (digitalRead(gpio.WAKE)?"High":"Low"));
+    Log.infoln("Second Test - sleep for 10 seconds and wake on clock");
     ab1805.interruptCountdownTimer(10,false);        // 10 seconds - no clock set required
     LowPower.sleep(12000);                           // Set the alarm for 12 seconds as a backstop
 
