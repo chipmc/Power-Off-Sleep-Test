@@ -88,9 +88,6 @@ void setup() {
     postSleep();
     Log.infoln("Third Test - Failure - Did not power off");
   }
-
-  
-
   Log.infoln("*********************************************");
 }
 
